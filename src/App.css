@@ -1,3 +1,22 @@
 html, body, #root, #root > div {
   height: 100%;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+#header-area {
+  width: 1024px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header-area img {
+  width: 206px;
+  height: 63px;
+}

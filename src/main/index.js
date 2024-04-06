@@ -21,12 +21,6 @@ function MainPage() {
 
   return (
     <div>
-      <div id="header">
-        <div id="header-area">
-          <img src="images/icons/logo.png"></img>
-        </div>
-      </div>
-      <div id="body">
         <div id="banner">
           <img src="images/icons/banner1.png"></img>
           <h1>판매되는 상품들</h1>
@@ -34,7 +28,11 @@ function MainPage() {
             {products.map(function (product, index) {
               return (
                 <div className="product-card">
-                  <Link className="product-link" to={`/product/${index}`}>
+                    <Link
+                style={{ color: "inherit" }}
+                className="product-link"
+                to={`/products/${product.id}`}
+              >
                     <div>
                       <img className="product-img" src={product.imageUrl}></img>
                     </div>
@@ -57,8 +55,7 @@ function MainPage() {
             <div className="product-card"></div>
           </div>
         </div>
-      </div>
-      <div id="footer"></div>
+
     </div>
   );
 }
