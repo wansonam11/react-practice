@@ -33,7 +33,7 @@
     background-color: rgb(230, 230, 230);
   }
 
-#banner {
+  #banner {
     max-height: 300px;
     margin-bottom: 20px;
   }
@@ -79,12 +79,7 @@
     overflow: hidden;
     position: relative;
   }
-  
-  .product-img {
-    width: 100%;
-    object-fit: contain;
-  }
-  
+
   .product-blur {
     position: absolute;
     top: 0;
@@ -95,7 +90,11 @@
     pointer-events: none;
   }
   
-
+  .product-img {
+    width: 100%;
+    object-fit: contain;
+  }
+  
   .product-contents {
     display: flex;
     flex-direction: column;
@@ -118,7 +117,7 @@
     display: flex;
     align-items: center;
     margin-left: 3px;
-  }
+  } 
   
   .product-avatar {
     width: 24px;
@@ -133,11 +132,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 12px;
   }
   
   .product-date {
     font-size: 13px;
     color: rgb(136, 136, 136);
     margin-right: 6px;
+  }
+
+  #upload-img {
+    width: 200px;
+    height: 200px;
+    margin-left: 16px;
+    object-fit: contain;
   }
   

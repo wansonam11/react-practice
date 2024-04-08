@@ -1,44 +1,33 @@
 import "./App.css";
 import MainPageComponent from "./main";
-import { Switch, Route, Link, useHistory } from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import UploadPage from "./upload";
 import ProductPage from "./product";
 import { Button } from "antd";
-import { DownloadOutlined } from "@ant-design/icons";
+import {DownloadOutlined} from "@ant-design/icons";
 
 function App() {
-  const history = useHistory();
+
+  const navigate = useNavigate();
 
   return (
     <div>
       <div id="header">
         <div id="header-area">
           <Link to="/">
-            <img src="/images/icons/logo.png" alt="logo"></img>
+          <img src="/images/icons/logo.png" alt="logo"></img>
           </Link>
-          <Button
-            size="large"
-            onClick={function () {
-              history.push("/upload");
-            }}
-            icon={<DownloadOutlined />}
-          >
-            upload
-          </Button>
+          <Button size="large" onClick={function(){
+              navigate("/upload");
+          }} icon={<DownloadOutlined/>}>upload</Button>
         </div>
       </div>
       <div id="body">
-        <Switch>
-          <Route exact={true} path="/">
-            <MainPageComponent />
-          </Route>
-          <Route exact={true} path="/products/:id">
-            <ProductPage />
-          </Route>
-          <Route exact={true} path="/upload">
-            <UploadPage />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path={"/"} element={<MainPageComponent />} />
+          <Route path={"/products/:id"} element={<ProductPage />} />
+          <Route path={"/upload"} element={<UploadPage />} />
+        </Routes>
       </div>
       <div id="footer"></div>
     </div>

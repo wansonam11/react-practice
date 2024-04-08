@@ -7,6 +7,12 @@ html, body, #root, #root > div {
   padding: 0;
   line-height: normal;
 }
+#header {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+}
 
 #header-area {
   width: 1024px;
@@ -19,4 +25,32 @@ html, body, #root, #root > div {
 #header-area img {
   width: 206px;
   height: 63px;
+}
+
+#body {
+  min-height: 100vh;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+
+#footer {
+  height: 200px;
+  background-color: rgb(230, 230, 230);
+}
+
+@media screen and (max-width: 400px) {
+  .product-card {
+    width: 160px !important;
+  }
+  #header {
+    padding: 0 8px;
+  }
+  #body {
+    padding: 0 8px;
+  }
+  .ant-carousel {
+    margin: 0 -8px;
+  }
 }
